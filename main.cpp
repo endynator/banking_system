@@ -3,13 +3,11 @@
 #include <iostream>
 #include <string>
 
-int main() {
+void loop() {
     int choice;
     BankAccount* userAccount = nullptr;
-    loadAccounts(); 
-
     while (true) {
-        std::cout << "(1) Create an account. (2) Log in account.\n"; cin >> choice;
+        std::cout << "(1) Create an account. (2) Log in account. (3) Exit.\n"; cin >> choice;
         if (choice == 1) {
             createAccount();
             break;
@@ -20,9 +18,19 @@ int main() {
                 break;
             }
         }
+        else {
+            return;
+        }
     }
     if (userAccount != nullptr) {
         init(*userAccount);
     }
+}
+
+int main() {
+
+    loadAccounts();
+    loop();
+
     return 0;
 }

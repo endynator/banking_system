@@ -1,6 +1,7 @@
 #ifndef UTILS_H
 #define UTILS_H
 #include <string>
+#include "account.h"
 
 using namespace std; //??????????????
 
@@ -24,6 +25,7 @@ To this day, I struggle to understand why does this header requires this kind of
 
 int generateAccountNumber();
 void displayMenu();
+void displayAdminMenu();
 bool isStrongPassword(string password);
 
 #endif
