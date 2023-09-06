@@ -99,11 +99,13 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="account.cpp" />
+    <ClCompile Include="admin.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="utils.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="account.h" />
+    <ClInclude Include="admin.h" />
     <ClInclude Include="main.h" />
     <ClInclude Include="utils.h" />
   </ItemGroup>

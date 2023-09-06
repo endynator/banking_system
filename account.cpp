@@ -1,6 +1,7 @@
 #include "account.h"
 #include "utils.h"
 #include "main.h"
+#include "admin.h"
 #include <iostream>
 #include <fstream>
 #include <vector>
@@ -32,7 +33,7 @@ void init(BankAccount& account) {
 				std::cout << "Exiting the program.\n";
 				return;
 			}
-		} while (choice < 4 && choice > 0);
+		} while (choice >= 1 && choice <= 4);
 	}
 	do {
 		displayMenu();
@@ -62,45 +63,6 @@ void init(BankAccount& account) {
 		}
 	} while (choice != 4 && choice != 5);
 }
-
-#pragma	region Admin Functions
-
-void AdminListAllAccounts() {
-	std::cout << "List of all accounts:\n";
-	for (const BankAccount& account : accounts) {
-		std::cout << "Account Number: " << account.accountNumber << ", Holder: " << account.accountHolder << ", Balance: $" << account.balance << std::endl;
-	}
-}
-
-void AdminDelAccount() {
-	int a_num;
-	std::cout << "\nAccount number: "; std::cin >> a_num;
-
-	if (a_num == 0) return;
-
-	for (auto it = accounts.begin(); it != accounts.end(); ++it) {
-		if (it->accountNumber == a_num) {
-			accounts.erase(it);
-		}
-	}
-}
-
-void AdminChangeBalance() {
-	int a_num, val;
-	std::cout << "\nAccount number: "; std::cin >> a_num;
-
-	std::cout << "New value: "; std::cin >> val;
-
-	for (BankAccount& account : accounts) {
-		if (account.accountNumber == a_num) {
-			account.balance = val;
-		}
-	}
-}
-
-#pragma endregion
-
-#pragma region User Functions
 
 void createAccount() {
 	bool ifPass = false;
@@ -179,8 +141,6 @@ void withdraw(BankAccount& account) {
 	}
 }
 
-#pragma endregion
-
 #pragma region Technical Part
 
 void loadAccounts() {
@@ -198,16 +158,19 @@ void loadAccounts() {
 }
 
 void saveAccounts() {
-	std::ofstream file("data/accounts.txt");
-	if (!file) {
-		std::cout << "Could not open accounts file for saving.\n";
-		return;
-	}
+    std::ofstream file("data/accounts.txt");
+    if (!file) {
+        std::cout << "Could not open accounts file for saving.\n";
+        return;
+    }
 
-	for (const BankAccount& account : accounts) {
-		file << account.accountNumber << " " << account.accountHolder << " " << std::fixed << std::setprecision(2) << account.balance << " " << account.accountPassword << std::endl;
-	}
-	file.close();
+    file << std::fixed << std::setprecision(2); // Set precision to 2 decimal places
+
+    for (const BankAccount& account : accounts) {
+        file << account.accountNumber << " " << account.accountHolder << " " << account.balance << " " << account.accountPassword << std::endl;
+    }
+
+    file.close();
 }
 
 #pragma endregion
