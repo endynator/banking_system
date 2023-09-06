@@ -1,14 +1,11 @@
-# Ignore build artifacts
-build/
-bin/
+scr/
+.vs/
 *.exe
 *.out
-
-# Ignore Visual Studio Code settings
+*.o
 .vscode/
-
-# Ignore macOS system files
-.DS_Store
-
-# Ignore project-specific config files
-config.ini
+.idea/
+*.suo
+*.user
+*.sln
+*.db
