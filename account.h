@@ -11,7 +11,7 @@ struct BankAccount {
     std::string accountHolder;
     double balance;
 
-    // Add this operator overload inside the BankAccount struct in 'account.h'
+    // Add this operator overload inside the BankAccount struct in 'account.h' to avoid an error
     bool operator==(const BankAccount& rhs) const {
         return accountNumber == rhs.accountNumber && accountPassword == rhs.accountPassword;
     }
