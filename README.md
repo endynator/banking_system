@@ -26,7 +26,7 @@ These instructions will help you set up and run the Banking System on your local
 1. Clone the repository to your local machine (or download the ZIP file).
 
    ```shell
-   git clone https://github.com/yourusername/banking-system.git
+   git clone https://github.com/endynator/banking-system.git
    ```
 
 2. Navigate to the project directory.
