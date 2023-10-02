@@ -66,8 +66,10 @@ void displayMenu() {
 	std::cout << "1. Display Account Info\n";
 	std::cout << "2. Deposit\n";
 	std::cout << "3. Withdraw\n";
-	std::cout << "4. Exit\n";
-	std::cout << "5. Log Out\n";
+	std::cout << "4. Remit\n";
+	std::cout << "5. History\n";
+	std::cout << "6. Exit\n";
+	std::cout << "7. Log Out\n";
 	std::cout << "Enter your choice: ";
 
 }
