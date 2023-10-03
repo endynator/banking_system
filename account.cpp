@@ -62,7 +62,8 @@ void saveLogs() {
 
 				file << log.dateTime << " | " << log.action << " | " << log.balance << " -> " << log.afterBalance;
 
-				if (log.action == "OutTransaction" || log.action == "InTransaction") file << " | sent to: " << log.recipientAccountNumber;
+				if (log.action == "OutTransaction") file << " | sent to: " << log.recipientAccountNumber;
+				if (log.action == "InTransaction") file << " | received from: " << log.recipientAccountNumber;
 
 				cout << endl;
 
