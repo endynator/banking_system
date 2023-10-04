@@ -105,16 +105,20 @@
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="account.cpp" />
-    <ClCompile Include="admin.cpp" />
-    <ClCompile Include="main.cpp" />
-    <ClCompile Include="utils.cpp" />
+    <ClCompile Include="user\account.cpp" />
+    <ClCompile Include="lib\actions.cpp" />
+    <ClCompile Include="user\admin.cpp" />
+    <ClCompile Include="lib\logging.cpp" />
+    <ClCompile Include="user\main.cpp" />
+    <ClCompile Include="lib\utils.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="account.h" />
-    <ClInclude Include="admin.h" />
-    <ClInclude Include="main.h" />
-    <ClInclude Include="utils.h" />
+    <ClInclude Include="headers\account.h" />
+    <ClInclude Include="headers\actions.h" />
+    <ClInclude Include="headers\admin.h" />
+    <ClInclude Include="headers\logging.h" />
+    <ClInclude Include="headers\main.h" />
+    <ClInclude Include="headers\utils.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
