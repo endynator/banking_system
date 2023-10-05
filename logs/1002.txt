@@ -1,2 +1,5 @@
 05.10.2023 | 00:00 | Deposit | 0 -> 32
 
+
+
+05.10.2023 | 10:10 | InTransaction | 0 -> 43.5 | recieved from: 1005

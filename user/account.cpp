@@ -74,6 +74,7 @@ void saveAccounts() {
 }
 
 void init(BankAccount& account) { 
+	saveAccounts();
 	int choice;
 	if (account.accountNumber == 0) {
 		do {
