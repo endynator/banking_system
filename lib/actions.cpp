@@ -74,7 +74,7 @@ void performTransaction(BankAccount& sender) {
 				saveLogs();
 			}
 			else {
-				std::cout << "Insufficient balance for the transaction.\n";
+				std::cout << red << "Insufficient balance for the transaction.\n" << upd;
 			}
 		}
 	}
@@ -136,6 +136,6 @@ void withdraw(BankAccount& account) {
 		saveLogs();
 	}
 	else {
-		std::cout << "Insufficient balance.\n";
+		std::cout << red << "Insufficient balance.\n" << upd;
 	}
 }

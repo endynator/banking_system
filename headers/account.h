@@ -25,8 +25,8 @@ struct Log {
     int recipientAccountNumber; 
 };
 
+//'extern' declares a variable without defining it
 extern std::vector<BankAccount> accounts;
-//extern declares a variable without defining it
 extern std::vector<Log> Logs;
 
 const std::string red = "\033[31m";

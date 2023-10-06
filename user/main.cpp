@@ -61,7 +61,10 @@ void loop() {
 	int choice;
 	BankAccount* userAccount = nullptr;
 	while (true) {
-		std::cout << "Welcome to the Banking System\nIt's a simulation of a bank, located on your local machine\nPlease, choose the option:\n(1) Create an account.\n(2) Log in account.\n(3) Exit.\n"; cin >> choice;
+		std::cout << green << "\tWelcome to the Banking System\n" << upd
+			 << "It's a simulation of a bank, located on your local machine\nPlease, choose the option:\n" 
+			 << "(1) Create an account.\n(2) Log in account.\n(3) Exit.\n"; 
+		cin >> choice;
 		if (choice == 1) {
 			createAccount();
 			break;

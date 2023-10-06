@@ -1,2 +1,8 @@
-﻿  logging.cpp
+﻿  actions.cpp
+  logging.cpp
+  utils.cpp
+  account.cpp
+  admin.cpp
+  main.cpp
+  Generating Code...
   banking_system.vcxproj -> D:\Games\ \prj\vs c++\banking_system\x64\Debug\banking_system.exe

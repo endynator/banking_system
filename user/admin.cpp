@@ -57,7 +57,9 @@ void AdminDelAccount() {
 	}
 	else {
 		std::cout << red << "Account not found.\n" << upd;
+		return;
 	}
+	std::cout << green << "Account deleted successfuly." << upd << endl;
 }
 
 void AdminChangeBalance() {
