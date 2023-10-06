@@ -1,3 +1,3 @@
 05.10.2023 | 00:17 | Deposit | 0 -> 12
-
-
+06.10.2023 | 11:49 | InTransaction | 12 -> 42 | recieved from: 1001
+06.10.2023 | 11:55 | InTransaction | 42 -> 54 | recieved from: 1002

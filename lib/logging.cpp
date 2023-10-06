@@ -23,17 +23,11 @@ void saveLogs() {
 				if (log.action == "OutTransaction") file << " | sent to: " << log.recipientAccountNumber;
 				if (log.action == "InTransaction") file << " | recieved from: " << log.recipientAccountNumber;
 
-				std::cout << std::endl;
-
 				for (int i = 0; i < Logs.size(); i++) {
 					if (Logs[i].accountNumber == log.accountNumber) Logs.erase(Logs.begin() + i);
 				}
+				file << std::endl;
 			}
-
-			if (log.action == "Transaction") {
-				file << " | Recipient: " << log.recipientAccountNumber;
-			}
-			file << std::endl;
 		}
 		file.close();
 	}
