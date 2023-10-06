@@ -82,7 +82,7 @@ void loop() {
 }
 
 int main() {
-
+	system("cls");
 	loadAccounts();
 	loop();
 
