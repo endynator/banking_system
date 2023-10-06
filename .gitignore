@@ -32,6 +32,4 @@
 *.app
 
 # Some folders
-
-/enc_temp_folder
-/vs
+.vs/
